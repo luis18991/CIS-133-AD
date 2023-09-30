@@ -1,4 +1,7 @@
-
+#address{
+    text-align: center;
+    text-wrap: wrap;
+}
 body *
 {font-size: 16px;
 font-family: serif;
