@@ -2,6 +2,15 @@ body {
     margin: 0px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     height: 100vh;
+    display: grid;
+    grid-template-columns: 15% auto;
+    grid-template-rows: 75px 1fr 50px;
+    grid-template-areas: 
+    "hdr hdr"
+    "aside main"
+    "ftr ftr"
+    
+
 }
 
 header, aside, main, footer {
@@ -10,18 +19,22 @@ header, aside, main, footer {
 }
 
 header {
+    grid-area:  hdr;
     color: white;
     background-color: rgb(33,87,51);
 }
 
 aside {
+    grid-area: aside;
     background-color: rgb(75,133,94);
 }
 
 main {
+    grid-area: main;
 }
 
 footer {
+    grid-area: ftr;
     color: white;
     background-color: rgb(53,112,72);
 }
@@ -40,4 +53,15 @@ p {
     font-style: italic;
     padding: 5px;
     border-radius: 3px;
+}
+header, footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header div{
+    margin: 0 20px;
+}
+footer div{
+    margin: 0 20px;
 }
