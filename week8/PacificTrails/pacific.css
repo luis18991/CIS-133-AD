@@ -46,7 +46,7 @@ nav li {
 
 nav ul { 
     display: flex;
-    flex-direction: column;
+    flex-direction: center;
     list-style-type: none; 
     margin: 0;
     padding: 0; 
@@ -97,4 +97,41 @@ h3 {
 
 #wrapper { 
     background-color: #FFFFFF;
+}
+
+@media(min-width: 600px){
+    nav ul {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        margin: 0;
+        padding-inline: 2.4em;
+
+    }
+    nav li{
+        border: none;
+        width: 14.4em;
+    }
+    h1 {
+        font-size: 3em ;
+        letter-spacing: 0.375em;
+    }
+    #homehero {
+        background-size: 100% 100%;
+    }
+}
+
+@media (min-width: 1024px){
+    body {
+        background: liner-gradient(180deg, white 20%, lightblue 60%, white 100% );
+    }
+    nav ul{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    #wrapper {
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 80%;
+    }
 }
