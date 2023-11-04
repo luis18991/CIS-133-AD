@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,67 +8,159 @@
     <link rel="stylesheet" href="style5.css">
     <title>Phoenix Metro Area Populations</title>
 </head>
+
+<style>
+    body {
+        background-image: linear-gradient(180deg, yellow 0%, red 100%);
+    }
+
+    #populationtable {
+        width: 40%;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 25px;
+    }
+
+    #population {
+        text-align: right;
+    }
+
+    #founded {
+        text-align: right;
+    }
+
+    #populationtable thead {
+        background-color: red;
+        color: white;
+    }
+
+    #populationtable tfoot {
+        background-color: lightyellow;
+    }
+
+    #populationtable tbody tr:nth-child(even) {
+        background-color: yellow;
+    }
+
+    #images {
+        width: 40%;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 25px;
+    }
+
+    #images img {
+        width: 200px;
+        height: 150px;
+    }
+</style>
+
+
 <body>
     <h1>Phoenix Metropolitan Area</h1>
 
-    <img src="./images/phx-panorama.jpg" style="width:100%;height:170px;object-fit:cover;" alt="Panoramic view of the Phoenix Metropolitan Area" />
+    <img src="./images/phx-panorama.jpg" style="width:100%;height:170px;object-fit:cover;"
+        alt="Panoramic view of the Phoenix Metropolitan Area" />
 
     <p>
-        The Phoenix Metropolitan Area also the Valley of the Sun, the Salt River Valley, or Metro Phoenix (known by most locals simply as “the Valley”) 
-        is the largest metropolitan area in the Southwestern United States, centered on the city of Phoenix, that includes much of the central part of Arizona. 
-        The United States Office of Management and Budget designates the area as the Phoenix-Mesa-Scottsdale Metropolitan Statistical Area (MSA), defining it as 
-        Maricopa and Pinal counties. As of the 2020 census, Metro Phoenix had 4,845,832 residents, making it the 11th largest metropolitan area in the nation by 
-        population. It anchors the Arizona Sun Corridor megaregion along with the second most populous metropolitan area in the state, the Tucson metropolitan 
-        area. The gross domestic product of the Phoenix Metropolitan Area was $255 billion in 2018, 16th largest amongst metro areas in the United States.
+        The Phoenix Metropolitan Area also the Valley of the Sun, the Salt River Valley, or Metro Phoenix (known by most
+        locals simply as “the Valley”)
+        is the largest metropolitan area in the Southwestern United States, centered on the city of Phoenix, that
+        includes much of the central part of Arizona.
+        The United States Office of Management and Budget designates the area as the Phoenix-Mesa-Scottsdale
+        Metropolitan Statistical Area (MSA), defining it as
+        Maricopa and Pinal counties. As of the 2020 census, Metro Phoenix had 4,845,832 residents, making it the 11th
+        largest metropolitan area in the nation by
+        population. It anchors the Arizona Sun Corridor megaregion along with the second most populous metropolitan area
+        in the state, the Tucson metropolitan
+        area. The gross domestic product of the Phoenix Metropolitan Area was $255 billion in 2018, 16th largest amongst
+        metro areas in the United States.
     </p>
 
-Cities and Suburbs Population
-City Name
-Population
-Founded
+    <table id="populationtable">
+        <thead>
+            <tr>
+                <th id="title" colspan="3">Cities and Suburbs Population</th>
+            </tr>
+            <tr>
+                <th id="city">City Name</th>
+                <th id="population">Population</th>
+                <th id="founded">Founded</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th id="city">Phoenix</th>
+                <th id="population">1,608,139</th>
+                <th id="founded">1868</th>
+            </tr>
+            <tr>
+                <th id="city">Mesa</th>
+                <th id="population">504,258</th>
+                <th id="founded">1878</th>
+            </tr>
+            <tr>
+                <th id="city">Chandler</th>
+                <th id="population">275,987</th>
+                <th id="founded">1912</th>
+            </tr>
+            <tr>
+                <th id="city">Gilbert</th>
+                <th id="population">267,918</th>
+                <th id="founded">1920</th>
+            </tr>
+            <tr>
+                <th id="city">Glendale</th>
+                <th id="population">Scottsdale</th>
+                <th id="founded">248,325</th>
+            </tr>
+            <tr>
+                <th id="city">Scottsdale</th>
+                <th id="population">241,361</th>
+                <th id="founded">1951</th>
+            </tr>
+            <tr>
+                <th id="city">Peoria</th>
+                <th id="population">190,985</th>
+                <th id="founded">1954</th>
+            </tr>
+            <tr>
+                <th id="city">Tempe</th>
+                <th id="population">180,587</th>
+                <th id="founded">1892</th>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="3"> Data from Wikipedia 06/2022</th>
+            </tr>
+        </tfoot>
 
-Phoenix
-1,608,139
-1868
 
-Mesa
-504,258
-1878
-
-Chandler
-275,987
-1912
-
-Gilbert
-267,918
-1920
-
-Glendale
-248,325
-1910
-
-Scottsdale
-241,361
-1951
-
-Peoria
-190,985
-1954
-
-Tempe
-180,587
-1892
-
-Data from Wikipedia 06/2022
-            
-<img class="cityImg" src="./images/phoenix.jpg" alt="Picture of the city of Phoenix" title="Phoenix">
-<img class="cityImg" src="./images/mesa.jpg" alt="Picture of the city of Mesa"  title="Mesa">
-<img class="cityImg" src="./images/chandler.jpg" alt="Picture of the city of Chandler"  title="Chandler">
-<img class="cityImg" src="./images/gilbert.jpg" alt="Picture of the city of Gilbert"  title="Gilbert">
-<img class="cityImg" src="./images/glendale.jpg" alt="Picture of the city of Glendale"  title="Glendale">
-<img class="cityImg" src="./images/scottsdale.jpg" alt="Picture of the city of Scottdale"  title="Scottsdale">
-<img class="cityImg" src="./images/peoria.jpg" alt="Picture of the city of Peoria"  title="Peoria">
-<img class="cityImg" src="./images/tempe.jpg" alt="Picture of the city of Tempe"  title="Tempe">
-
+    </table>
+    <table id="images">
+        <tr>
+            <td><img class="cityImg" src="./images/phoenix.jpg" alt="Picture of the city of Phoenix" title="Phoenix">
+            </td>
+            <td><img class="cityImg" src="./images/mesa.jpg" alt="Picture of the city of Mesa" title="Mesa"></td>
+            <td><img class="cityImg" src="./images/chandler.jpg" alt="Picture of the city of Chandler" title="Chandler">
+            </td>
+            <td><img class="cityImg" src="./images/gilbert.jpg" alt="Picture of the city of Gilbert" title="Gilbert">
+            </td>
+        </tr>
+        <tr>
+            <td><img class="cityImg" src="./images/glendale.jpg" alt="Picture of the city of Glendale" title="Glendale">
+            </td>
+            <td><img class="cityImg" src="./images/scottsdale.jpg" alt="Picture of the city of Scottdale"
+                    title="Scottsdale"></td>
+            <td><img class="cityImg" src="./images/peoria.jpg" alt="Picture of the city of Peoria" title="Peoria"></td>
+            <td><img class="cityImg" src="./images/tempe.jpg" alt="Picture of the city of Tempe" title="Tempe"></td>
+        </tr>
+    </table>
 </body>
+
 </html>
