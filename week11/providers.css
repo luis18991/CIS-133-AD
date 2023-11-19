@@ -1,0 +1,28 @@
+table {
+    justify-content: center;
+}
+
+body {
+    background-color:bisque
+}
+
+tbody tr:nth-child(odd){
+    background-color: aqua;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
