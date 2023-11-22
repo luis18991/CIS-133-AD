@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,7 +43,7 @@
             <tr>
                 <td colspan="2" style="text-align:right;"">
                     <input type="button" value="Cancel" onclick="cancelTicket()" />
-                    <input type="button" value="Print Ticket" onclick="printTicket()" />
+                <input type="button" value="Print Ticket" onclick="printTicket()" />
                 </td>
             </tr>
         </table>
@@ -51,9 +52,9 @@
     <ticket>
         <ownerInfo>
             <p>Sr. Amigo's Name</p>
-            <p><span class="boldText" id="ownerName">???</span></p>
+            <p><span class="boldText" id="ownerName" onclick="Name()">???</span></p>
             <p>Date of Visit</p>
-            <p><span class="boldText" id="visitDate">??/??/????</span></p>
+            <p><span class="boldText" id="visitDate" onclick="visitDate()">??/??/????</span></p>
         </ownerInfo>
 
         <amigoInfo>
@@ -63,4 +64,23 @@
         </amigoInfo>
     </ticket>
 </body>
+<script>
+    function Name(){
+        let strName = window.prompt("Name");
+        document.getElementById("ownerName").innerText = strName;
+        document.title = `${strName}'s Ticket to Animal Amigos`;
+    }
+
+
+    function visitDate(){
+        let strDate = window.prompt("What date are you visiting?");
+        document.getElementById("visitDate").innerText = strDate;
+    }
+
+    function cancelTicket(){
+        window.close();
+    }
+
+</script>
+
 </html>
