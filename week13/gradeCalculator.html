@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My CIS133 Grades</title>
     <style>
-        table { 
-            margin-left:auto;
-            margin-right:auto;
+        table {
+            margin-left: auto;
+            margin-right: auto;
             border-spacing: 0px;
             margin-top: 50px;
         }
 
-        thead, tfoot {
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        thead,
+        tfoot {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
             color: white;
             background-color: darkgreen;
         }
-        
-        th, td {
+
+        th,
+        td {
             padding: 10px;
         }
 
@@ -36,8 +39,8 @@
             padding-right: 20px;
         }
 
-        tbody > tr:nth-of-type(even) {
-	        background-color: lightgreen;
+        tbody>tr:nth-of-type(even) {
+            background-color: lightgreen;
         }
 
         input[type=number] {
@@ -46,6 +49,7 @@
         }
     </style>
 </head>
+
 <body>
     <table>
         <thead>
@@ -102,6 +106,9 @@
         </tbody>
         <tfoot>
             <tr>
+                <td colspan="3"><button onclick="calc()">Total</button></td>
+            </tr>
+            <tr>
                 <th>Total</th>
                 <th class="sum" id="posTot"></th>
                 <th class="sum" id="actTot"></th>
@@ -113,4 +120,44 @@
     </table>
 
 </body>
+
+<script>
+    function calc() {
+        var posTot = 0, actTot = 0, pctTot, strGrade;
+        var aryElms = document.getElementsByTagName('input')
+
+        for (i = 0; i < aryElms.length; i++) {
+            if (aryElms[i].id.indexOf('pos') == 0) {
+                posTot += parseInt(aryElms[i].value)
+            }
+            if (aryElms[i].id.indexOf('act') == 0) {
+                actTot += parseInt(aryElms[i].value)
+            }
+        }
+        document.getElementById('posTot').innerText = posTot;
+        document.getElementById('actTot').innerText = actTot;
+        pctTot = parseInt((actTot / posTot) * 100);
+
+        switch (true) {
+            case (pctTot > 89):
+                strGrade = 'A';
+                break;
+            case (pctTot > 79):
+                strGrade = 'B';
+                break;
+            case (pctTot > 69):
+                strGrade = 'C';
+                break;
+            case (pceTot > 59):
+                strGrade = 'D';
+                break;
+            default:
+                strGrade = 'F';
+                break;
+        }
+        document.getElementById('myGrade').innerText = `Letter Grade: ${strGrade} (${pctTot}%)`;
+    }
+</script>
+
+
 </html>

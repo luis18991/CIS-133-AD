@@ -40,7 +40,7 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="text-align:right;"">
+                <td colspan="2" style="text-align:right;">
                     <input type="button" value="Cancel" onclick="cancelTicket()" />
                     <input type="button" value="Print Ticket" onclick="printTicket()" />
                 </td>
@@ -74,6 +74,28 @@
 
     function cancelTicket() {
         window.close();
+    }
+
+    function printTicket() {
+        var amigoName = document.getElementById('amigo_name').value;
+        var amigoType = document.getElementById('amigo_type').value;
+        var amigoSizeOptions = document.getElementsByName('amigo_size');
+
+        var amigoSize;
+        for (var i = 0; i < amigoSizeOptions.length; i++) {
+            if (amigoSizeOptions[i].checked) {
+                amigoSize = amigoSizeOptions[i].value;
+            break;
+        } 
+
+        }
+        document.getElementById('amigoName').innerText = amigoName;
+        var imgSrc = `./images/${amigoType}-${amigoSize}.jpg`;
+        document.getElementById('amigoPicture').src = imgSrc;
+        document.getElementById('amigoPicture').style.height = '150px';
+        document.getElementById('form').style.display = 'none';
+        alert ('Your ticket is ready to be printed!');
+
     }
 
 </script>
