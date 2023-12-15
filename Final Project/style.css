@@ -1,0 +1,175 @@
+
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    /*background-image: linear-gradient(rgb(148, 72, 155), rgb(255,255,255));*/
+    background-image: url(Images/back_ground_pic2.jpg);
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+body{
+    backdrop-filter: blur(2px);
+}
+#wrapper{
+    background-color:rgba(255,255,255,1);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    height: 100%;
+}
+
+nav>ul {
+    text-align: center;
+    width: fit-content;
+    display: flex;
+}
+
+nav>ul>li {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    list-style-type: none;
+    height: 100%;
+}
+
+ul {
+    text-align: center;
+}
+ul>li {
+    list-style-type:none;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    height: 300px;
+    width: 400px;
+    padding: 25;
+}
+
+nav>ul>li>a>img {
+    height: 50px;
+    width: auto;
+
+}
+
+.image {
+    display: flex;
+}
+
+p {
+    text-align: center;
+    text-size-adjust: 30px;
+    font-weight: bolder;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+footer {
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+footer a {
+    color: aliceblue;
+}
+
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+#warranty_images {
+    display: inline;
+}
+
+table{
+    text-align:left;
+}
+
+form {
+    position: relative;
+    left: 100px;
+}
+
+form hr {
+    position: relative;
+    left: -100px;
+    
+}
+
+#logo {
+    width: 200px;
+    height: 200px;
+}
+
+#full_name {
+    width: 515px;
+}
+
+#street {
+    width: 515px;
+}
+
+#email {
+    width: 515px;
+}
+
+#phone {
+width: 515px;
+}
+#Special_Instructions {
+    width: 515px;
+}
+
+
+@media screen and (max-width: 800px) {
+    img {
+        max-width: 40vw;
+    }
+
+    tr>td {
+        display: block;
+        text-align: center;
+    }
+
+    nav>ul>li {
+        margin-right: 5vw;
+        margin-left: 5vw;
+        font-size: 6vw;
+    }
+
+    iframe {
+        max-width: 90svw;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
