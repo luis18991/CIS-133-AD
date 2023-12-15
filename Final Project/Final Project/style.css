@@ -106,6 +106,42 @@ table{
     text-align:left;
 }
 
+form {
+    position: relative;
+    left: 100px;
+}
+
+form hr {
+    position: relative;
+    left: -100px;
+    
+}
+
+#logo {
+    width: 200px;
+    height: 200px;
+}
+
+#full_name {
+    width: 515px;
+}
+
+#street {
+    width: 515px;
+}
+
+#email {
+    width: 515px;
+}
+
+#phone {
+width: 515px;
+}
+#Special_Instructions {
+    width: 515px;
+}
+
+
 @media screen and (max-width: 800px) {
     img {
         max-width: 40vw;
